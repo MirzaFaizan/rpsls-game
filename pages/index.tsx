@@ -1,13 +1,16 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import type { NextPage } from 'next';
+import { Container, Typography } from '@mui/material';
+import { Game } from '../components/Game';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-)
+const Home: NextPage = () => {
+  return (
+    <Container>
+      <Typography variant="h2" align="center" gutterBottom>
+        Rock, Paper, Scissors, Lizard, Spock
+      </Typography>
+      <Game />
+    </Container>
+  );
+};
 
-export default IndexPage
+export default Home;
